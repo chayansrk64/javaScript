@@ -47,9 +47,82 @@ const arr2 = new Array("asdf");
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
     let fLen = fruits.length;
     let text = "<ul>";
-    for(let i = 0; i <= fLen; i++){
+    for(let i = 0; i < fLen; i++){
         text += "<li>" + fruits[i] + "</li>";
     }
     text += "</ul>"
-document.getElementById("demo").innerHTML = text;
+// document.getElementById("demo").innerHTML = text;
+}
+
+{
+   const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+    let text = "<ul>";
+    fruits.forEach(myFunction);
+   
+    text += "</ul>";
+
+    // document.getElementById("demo2").innerHTML = text;
+
+    function myFunction(value) {
+    text += "<li>" + value + "</li>";
+
+}
+}
+
+// JavaScript has a built-in array constructor;
+const points = new Array(1, 2);
+// let p = document.getElementById('array').innerHTML = points;
+// console.log(Array.isArray(points))
+// console.log(points instanceof Array);
+
+{
+const myObj = {
+  name: "John",
+  age: 30,
+  cars: [
+    {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+    {name:"BMW", models:["320", "X3", "X5"]},
+    {name:"Fiat", models:["500", "Panda"]}
+  ]
+}
+    for(let i in myObj.cars){
+        let arr = myObj.cars[i].models;
+        // console.log(arr)
+        if(arr[1]){
+            for(let j in arr){
+            // console.log(arr[j])
+                 }
+            break;
+        }
+        
+
+        // for(let j in arr[0]){
+        //     console.log(arr[j])
+        // }
+    }
+
+}
+{
+    
+    let x = "";
+    const myObj = {
+  name: "John",
+  age: 30,
+  cars: [
+    {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+    {name:"BMW", models:["320", "X3", "X5"]},
+    {name:"Fiat", models:["500", "Panda"]}
+    ]
+    }
+
+    for(let i in myObj.cars){
+      x += "<h2>" + myObj.cars[i].name + "</h2>"
+        for(let j in myObj.cars[i].models){
+            x += "<p>" + myObj.cars[i].models[j] + "</p>"
+        }
+    }
+
+    let title = document.getElementById("container").innerHTML = x;
+
 }
