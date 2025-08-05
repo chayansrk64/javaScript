@@ -1,3 +1,15 @@
+/**
+ * Arrays are Not Constants
+ * It does NOT define a constant array. It defines a constant reference to an array;
+ * Because of this, we can still change the elements of a constant array.
+ * 
+ * What is an Array?
+ * Arrays are generally described as "list-like objects"; they are basically single objects that 
+ * contain multiple values stored in a list.
+ * 
+ */
+
+
 const cars = new Array();
 
 cars[0] = "Volvo";
@@ -123,6 +135,32 @@ const myObj = {
         }
     }
 
-    let title = document.getElementById("container").innerHTML = x;
+    // let title = document.getElementById("container").innerHTML = x;
+
+}
+
+// multidimensional array
+{
+    const random = ["tree", 795, [0, 1, 2]];
+    // console.log(random[2][2])
+}
+
+// converting between strings and arrays ==========
+{
+    const data = "Manchester, London, Liverpool, Birmingham, Leeds, Carlisle";
+    const cities = data.split(","); // returns an array
+     
+    // console.log(cities)
+    const commaSeparated = cities.join(","); // returns string comma separated
+    // console.log(commaSeparated)
+
+    const str = "Bangladesh";
+    let arr = str.split(",")
+   let backToString = arr.join(",")
+
+   const myArr = ["Manik", "Suhel"];
+   let arrToStr = myArr.join(",");
+   let strToArr = arrToStr.split(",")
+//    console.log(strToArr)
 
 }
