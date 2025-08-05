@@ -93,3 +93,50 @@
 }
 
 // JavaScript Array entries()
+{
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    const f = fruits.entries();
+    for(let x of f){
+        // console.log(x)
+    }
+    // console.log(f)
+}
+
+// JavaScript Array with() Method
+{
+    const months = ["Januar", "Februar", "Mar", "April"];
+    const myMonths = months.with(2, "March"); // without altering the original array
+    // console.log(myMonths)
+}
+// JavaScript Array Spread (...)
+{
+    const arr1 = [1, 2, 3];
+    const arr2 = [4, 5, 6]; 
+    const arr3 = [...arr1, ...arr2];
+    // console.log(arr3)
+    // copy 
+    const arr4 = [...arr3];
+    // console.log(arr4)
+}
+// min and max using spread(...)
+{
+    const numbers = [23,44,56,76,98];
+    let minValue = Math.min(...numbers);
+    // console.log(minValue)
+    let maxValue = Math.max(...numbers);
+    // console.log(maxValue)
+}
+
+// JavaScript Array Rest (...)
+{
+    let a, rest;
+    const arr1 = [1,2,3,4,5,6,7,8];
+    [a, ...rest] = arr1;
+    // console.log(rest) 
+}
+{
+    let a, b, rest;
+    const arr1 = [1,2,3,4,5,6,7,8];
+    [a, b, ...rest] = arr1;
+    // console.log(rest) 
+}
