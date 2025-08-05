@@ -19,5 +19,10 @@
 }
 // JavaScript Array filter()
 {
-    
+     const numbers = [45, 4, 9, 16, 25];
+     const result = numbers.filter(filtering)
+     function filtering(value, index, array){
+        return value > 9;
+     }
+    //  console.log(result)
 }
