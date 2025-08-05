@@ -63,7 +63,7 @@
    function myArrayMin(arr){
         return Math.min.apply(null, arr)
    }
-   console.log(myArrayMin(points)) 
+//    console.log(myArrayMin(points)) 
 }
 // get the Maximum number form an array
 {
@@ -71,5 +71,5 @@
    function myArrayMax(arr){
         return Math.max.apply(null, arr)
    }
-   console.log(myArrayMax(points)) 
+//    console.log(myArrayMax(points)) 
 }
