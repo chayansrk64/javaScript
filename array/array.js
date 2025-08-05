@@ -159,8 +159,13 @@ const myObj = {
    let backToString = arr.join(",")
 
    const myArr = ["Manik", "Suhel"];
+   let makeStr = myArr.toString();
    let arrToStr = myArr.join(",");
    let strToArr = arrToStr.split(",")
-//    console.log(strToArr)
+//    console.log(makeStr)
 
 }
+
+
+
+
