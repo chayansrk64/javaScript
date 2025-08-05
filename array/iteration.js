@@ -66,5 +66,30 @@
 {
     let text = 'abcdefg';
     let result = Array.from(text);
-    console.log(result)
+    // console.log(result)
 }
+{
+    const arr1 = ['a', 'b']
+    const arr2 = ['c', 'd']
+    const arr3 = ['e', 'f']
+    let concated = arr1.concat(arr2, arr3);
+    // console.log(concated) // concatinated into one array
+    let text = '';
+    for(let i of concated){
+        text += i;
+    }
+    // console.log(text) // created a string with all the element;
+    let makeArr = Array.from(text);
+    // console.log(makeArr) // agian make it an array;
+}
+// JavaScript Array keys()
+{
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    const keys = fruits.keys();
+    for(let x of keys){
+        // console.log(x) // getting the index;
+    }
+    // console.log(keys) // Object [Array Iterator] {}
+}
+
+// JavaScript Array entries()
