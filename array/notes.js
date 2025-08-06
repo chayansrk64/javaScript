@@ -250,3 +250,16 @@
     let stringToArr = arrToString.split(" ")
     // console.log(stringToArr)
 }
+
+// Higher Dimension Arrays
+/**
+ * step 1: first make the array to string;
+ * step 2: split(',') the string by comma; will return an array with sting;
+ * step 3: map the array and convert every element string to number;
+ */
+{
+    const deeplyNested = [4,[5,6,[7,8],9]];
+    // let flattenArr = String(deeplyNested).split(',').map(Number);
+    // let flattenArr = deeplyNested.toString().split(',').map(Number);
+    // console.log(flattenArr)
+}
