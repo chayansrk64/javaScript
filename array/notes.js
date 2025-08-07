@@ -263,3 +263,40 @@
     // let flattenArr = deeplyNested.toString().split(',').map(Number);
     // console.log(flattenArr)
 }
+
+
+
+// flatten two-dimensional array
+
+const twoDArray = [[1, 2],[3, 4],[5, 6]]
+// console.log(twoDArray.flat(1));
+
+let flattenArr = [];
+for(let i = 0; i < twoDArray.length; i++){
+    for(let j = 0; j < twoDArray[i].length; j++){
+        flattenArr.push(twoDArray[i][j])
+    }
+}
+// console.log(flattenArr)
+
+
+
+
+// flatten multi-dimensional array
+
+const multiArray = [1, [2, 3], [4, [5, 6]], 7];
+// console.log(multiArray.flat(Infinity))
+
+function flattenArray(arr){
+    let flatArr = [];
+    for(let i = 0; i < arr.length; i++){
+        if(Array.isArray(arr[i])){
+            flatArr = flatArr.concat(flattenArray(arr[i]))
+        }else {
+            flatArr.push(arr[i])
+        }
+    }
+    return flatArr;
+}
+let result = flattenArray(multiArray);
+// console.log(result)
