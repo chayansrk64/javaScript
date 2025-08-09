@@ -79,6 +79,10 @@
     })
     // console.log(person.fullName())
 }
+
+
+// =====================  NOTES  =======================
+
 /**
  * Summary:
  * Objects are containers for Properties and Methods
@@ -121,3 +125,36 @@
  * 7. bigint
  * 
  */
+
+
+/**
+ * Immutable
+ * Primitives data types (values) are immutable (they are hardcoded and cann't be changed).
+ * 
+ */
+
+/**
+ * JavaScript Objects are Mutable
+ * Objects are mutable: They are addressed by reference, not by value.
+ * If person is an object, the following statement will not create a copy of person:
+ * 
+ * const x = person;
+ * 
+ * The object x is not a copy of person. The object x is person.
+ * The object x and the object person share the same memory address.
+ * Any changes to x will also change person:
+ */
+
+
+{
+    const person = {
+        firstName:"John",
+        lastName:"Doe",
+        age:50, eyeColor:"blue"
+    }
+    // the object x is person here
+    const x = person;
+    // this will change the age in person
+    x.age = 60;
+    // they are sharing the same memory address.
+}
