@@ -74,5 +74,82 @@ person.natinality = "English";
   }
 }
 
+}
+
+
+/**
+ * JavaScript Object Properties
+ * Property Management Methods:
+ *  
+ * // Adding or changing an object property:
+ * # Object.defineProperty(object, property, descriptor)
+ * 
+ * // Adding or changing object properties: 
+ * # Object.defineProperties(object, descriptors)
+ * 
+ * // Accessing a Property:
+ * # Object.getOwnPropertyDescriptors(object)
+ * 
+ * // Returns all properties as an array:
+ * # Object.getOwnPropertyNames(object)
+ * 
+ * // Accessing the prototype:
+ * # Object.getPrototypeOf(object)
+ * 
+ */
+
+
+// JavaScript Object.defineProperty()
+// The Object.defineProperty() method can be used to:
+/**
+ * * Adding a new property to an object;
+ * * Changing property values;
+ * * Changing property metadata;
+ * * Changing object getters and setters
+ * 
+ *  Syntax:
+ *  Object.defineProperty(object, proterty, descriptor)
+ */
+
+// Adding a new property:
+
+{
+    // create an object:
+    const person = {
+        firstName: "Manik",
+        lastName: "Mia",
+        age: 30
+    }
+    // console.log(person)
+    // adding a new property:
+    Object.defineProperty(person, "language", {
+        value:"Bangla",
+        enumerable: true // make it visible
+    });
+    // console.log(person)
+     
+}
+
+// Changing a Property Value
+{
+    const person = {
+        firstName: "John",
+        lastName : "Doe",
+        language : "EN"
+    };
+
+    Object.defineProperty(person, "language", {value: "BN"})
+    // console.log(person)
 
 }
+
+
+
+/**
+ * Property Attributes
+ * 
+ * 
+ * 
+ */
+
+ 
