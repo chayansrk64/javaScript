@@ -23,8 +23,95 @@
  */
 
 
+// JavaScript Object.assign()
+// The Object.assign() method copies properties from one or more source objects to a target object;
 
 
+{
+    // create target object
+    const person1 = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue"
+    };
+    // create source object
+    const person2 = {firstName: "Anne",lastName: "Smith"}
+    // assign source to target
+    Object.assign(person1, person2) //(target, source)
+    // console.log(person1, person2)
+}
+
+// JavaScript Object.entries()
+// Object.entries() returns an array of the key/value pairs in an object:
+{
+    const person = {
+        firstName : "John",
+        lastName : "Doe",
+        age : 50,
+        eyeColor : "blue"
+    };
+    let arr = Object.entries(person);
+    // console.log(arr)
+
+    // using for loop:
+    let array = []
+    for(let key in person){
+        if(person.hasOwnProperty(key)){
+            array.push([key, person[key]])
+        }
+    }
+    // console.log(array)
+
+// output:
+// [
+//   [ 'firstName', 'John' ],
+//   [ 'lastName', 'Doe' ],  
+//   [ 'age', 50 ],
+//   [ 'eyeColor', 'blue' ]  
+// ]
+
+}
+
+// JavaScript Object.fromEntries()
+{
+    const fruits = [
+        ["apples", 300],
+        ["pears", 900],
+        ["bananas", 500]
+    ];
+
+    const myObj = Object.fromEntries(fruits);
+    // console.log(myObj);
+
+    // using for loop:
+    let obj = {};
+    for(let i = 0; i< fruits.length; i++){
+        let key = fruits[i][0];
+        let value = fruits[i][1];
+        obj[key] = value;
+    }
+    // console.log(obj)
+
+
+
+
+}
+
+
+
+// JavaScript Object.values()
+// Object.values() is similar to Object.entries(), but returns a single dimension array of the object values:
+{
+    const person = {
+        firstName : "John",
+        lastName : "Doe",
+        age : 50,
+        eyeColor : "blue"
+    };
+    let text = Object.values(person)
+    // console.log(text)
+}
 
 
 
@@ -63,7 +150,7 @@
     }
     // this refers to the person object:
     // Accessing Object Methods
-    console.log(person.fullName())
+    // console.log(person.fullName())
 }
 
 // Adding a Method to an Object
@@ -77,5 +164,5 @@
         }
     }
     person.address = function(){return "KG, 32"}
-    console.log(person.address())
+    // console.log(person.address())
 }
