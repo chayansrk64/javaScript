@@ -139,7 +139,7 @@ person.natinality = "English";
     };
 
     Object.defineProperty(person, "language", {value: "BN"})
-    console.log(person)
+    // console.log(person)
 
 }
 
@@ -180,4 +180,27 @@ person.natinality = "English";
     // Defining a setter:
     // set: function(){return language = value}
 }
+
+// JavaScript getOwnPropertyNames()
+// The getOwnPropertyNames() method can:
+// * List object properties
+// syntax: Object.getOwnPropertyNames(object)
+
+
+// List all Object Properties
+
+{
+    // Create an Object
+const person = {
+  firstName: "John",
+  lastName : "Doe",
+  language : "EN"
+};
+
+// get all properties
+let properties = Object.getOwnPropertyNames(person)
+// console.log(properties)
+// N:B Object.getOwnPropertyNames() will also list properties that is not enumerable:
+}
+
  
