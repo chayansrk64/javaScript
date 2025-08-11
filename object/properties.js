@@ -139,7 +139,7 @@ person.natinality = "English";
     };
 
     Object.defineProperty(person, "language", {value: "BN"})
-    // console.log(person)
+    console.log(person)
 
 }
 
@@ -147,9 +147,37 @@ person.natinality = "English";
 
 /**
  * Property Attributes
+ * All properties have a name. In addintion they also have a value.
+ * The value is one of the property's attributes.
+ * Other attributes are: enumerable, configurale, and writable.
+ * These attributes define how the property can be accessed (is it readable?, is it writable?)
+ * In JavaScript, all attributes can be read, but only the value attribute can be changed (and only if the property is writable).
  * 
  * 
  * 
  */
 
+/**
+ * Changing Meta Data:
+ * 
+ * writable: true // property value can be changed
+ * enumerable: true // property value can be changed
+ * configurable: true // Property can be reconfigured
+ * 
+ * 
+ * 
+ * writable: false // property value can not be changed
+ * enumerable: false // property value can be not enumerated
+ * configurable: false // Property can not be reconfigured
+ * 
+ * 
+ */
+// Getters and setters can also be changed:
+
+{
+    // Defining a g etter:
+    // get: function() {return language}
+    // Defining a setter:
+    // set: function(){return language = value}
+}
  
