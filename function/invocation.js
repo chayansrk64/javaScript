@@ -110,7 +110,9 @@ myObject.fullName();
     
     // This will return "John";
     myObj.firstName;
-    console.log(myObj)
+    // console.log(myObj)
 
 
 }
+
+ 
