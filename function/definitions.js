@@ -72,17 +72,87 @@
 // function defined using declaration are hoisted:
 myFunction(4);
 function myFunction(n){
-    console.log(n)
+    // console.log(n)
 }
 
 
 // function defined using expression are not hoisted:
 const y = function (n){
-    console.log(n)
+    // console.log(n)
 }
 y(5);
 
 
-// Self-Invoking Functions
+/**
+ * ============ Self-Invoking Functions ===========
+ * 
+ *  # Function expressions can be made "self-invoking".
+ * A self-invoking expression is invoked (started) automatically, without being called.
+ * Function expressions will execute automatically if the expression is followed by ().
+ * 
+ *  # You cann't self-invoke a function declaration.
+ * You have to add parentheses around the function to indicate that it is a function expression:
+ * 
+ * 
+ */
+
+{
+    (function () {
+        let x = "Hello!"; // I'll invoke myself
+    })();
+
+    // The function above is actually an anonymous self-invoking function (functino without name).
+
+}
 
 
+// Functions Can Be Used as Values
+{
+    function myFunction(a, b){
+        return a * b;
+    }
+    let x = myFunction(3, 4);
+}
+
+
+// JavaScript functions can be used in expressions:
+{
+    function myFunction(a ,b){
+        return a * b;
+    }
+    let x = myFunction(3, 4) * 2;
+    
+}
+
+
+/**
+ *  =========== Functions are Objects =============
+ * The typeof operator in JavaScript return 'function' for functions. typeof myFunction = function;
+ * But, JavaScript functions can best be described as objects.
+ * JavaScript functions have both 'properties' and 'methods'.
+ * The arguments.length property returns the number of arguments received when the function was invoked.
+ * 
+ * 
+ * 
+ */
+{
+    function myFunction(a, b){
+        return arguments.length;
+    }
+    // console.log(myFunction(5,6,)) // 2;
+}
+
+// The toString() method returns the function as a string:
+{
+    function myFunction(a, b){
+        return a * b;
+    }
+    let text = myFunction.toString();
+    // console.log(text)
+}
+
+
+/**
+ * NOTE: A function defined as the property of an object, is called a method to the object.
+ * NOTE: A function designed to create new objects, is called an object Constructor.
+ */
