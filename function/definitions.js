@@ -1,5 +1,5 @@
 /**
- *  JavaScript Function Definitions
+ *  =========== JavaScript Function Definitions ==============
  *  
  * JavaScript functions are defined with the function keyword.
  * 
@@ -10,7 +10,7 @@
  * 
  * */
 
-// Function Declarations
+// ============== Function Declarations =================
 
 // Earlier in this tutorial, you learned taht functions are declared with the following syntax:
 /**
@@ -23,7 +23,7 @@
  *  
  */
 
-// Function Expressions
+// ========== Function Expressions ==============
 
 /**
  *  A JavaScript function can also be defined using an expression
@@ -58,5 +58,31 @@
     let x = myFunction(5, 6);
     // console.log(x)
 }
+
+
+
+/**
+ * ============ Function Hoisting ==============
+ * Earlier in this tutorial, you learned about 'hoisting' (javascript hoisting).
+ * Hoisting is JavaScript's default behavior of moviing declarations to the top of the current scope.
+ * Hoisting applies to variable declarations and to function declarations
+ * Because of this, JavaScript functions can be called before they are declared:
+ * 
+ * */ 
+// function defined using declaration are hoisted:
+myFunction(4);
+function myFunction(n){
+    console.log(n)
+}
+
+
+// function defined using expression are not hoisted:
+const y = function (n){
+    console.log(n)
+}
+y(5);
+
+
+// Self-Invoking Functions
 
 
