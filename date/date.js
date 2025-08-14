@@ -23,5 +23,31 @@ const date = new Date();
 
 {
     const date = new Date("2025-07-13");
-    console.log(date) // Sun Jul 13 2025 06:00:00 GMT+0600 (Bangladesh Standard Time)
+    // console.log(date) // Sun Jul 13 2025 06:00:00 GMT+0600 (Bangladesh Standard Time)
+}
+
+{
+    const date = new Date();
+    // console.log(date)
+}
+
+// ISO Dates (Year and Month)
+{
+    const d = new Date("2025-03-05")
+    // console.log(d)
+    // ISO dates can be written with added hours, minutes, and seconds (YYYY-MM-DDTHH:MM:SSZ):
+
+    const date = new Date("2025-07-14T15:27:00Z");
+    // console.log(date)
+}
+
+{
+    // JavaScript Long Dates.
+    // Long dates are most often written with a "MMM DD YYYY" syntax like this:
+
+    const date1 = new Date("Jan 25 2015");
+    const date2 = new Date("25 Jan 2025");
+    const date3 = new Date("January 25 2025");
+    const date4 = new Date("JANUARY, 25, 2025")
+   
 }
